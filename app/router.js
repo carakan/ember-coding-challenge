@@ -5,6 +5,13 @@ const Router = Ember.Router.extend({
   location: config.locationType
 });
 
-Router.map(function() {});
+Router.map(function() {
+  this.route('contacts', {path: '/'}, function(){
+    this.route('contact', {path: ':id'}, function(){
+      this.route('show');
+      this.route('edit');
+    });
+  });
+});
 
 export default Router;

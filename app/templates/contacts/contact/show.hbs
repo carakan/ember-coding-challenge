@@ -1,0 +1,32 @@
+<div class="contact contact-banner">
+  <div class="photo-wrapper">
+    <img src="{{model.picture}}" alt="">
+  </div>
+  <div class="information">
+    <h2 class="light name">{{model.firstName}} {{model.lastName}}</h2>
+    <p class="light-blue title-company">
+      {{model.jobTitle}} at {{model.company}}
+    </p>
+  </div>
+</div>
+<div class="contact-details">
+  <div class="contact-section">
+    <h4 class="section-title">Contact</h4>
+    <table class="contact-items">
+      <tbody>
+        <tr>
+          <td class="icon">{{fa-icon 'phone'}}</td>
+          <td class="phone">{{model.phone}}</td>
+        </tr>
+        <tr>
+          <td class="icon">{{fa-icon 'envelope-o'}}</td>
+          <td class="email">{{model.email}}</td>
+        </tr>
+        <tr>
+          <td class="icon">{{fa-icon 'birthday-cake'}}</td>
+          <td class="birthday">{{model.birthday}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
