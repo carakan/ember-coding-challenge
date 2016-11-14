@@ -6,11 +6,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('contacts', {path: '/'}, function(){
+  this.route('contacts', function(){
     this.route('contact', {path: ':id'}, function(){
       this.route('show');
       this.route('edit');
     });
+    this.route('new');
   });
 });
 
