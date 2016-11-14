@@ -8,6 +8,6 @@ export default function() {
   this.get('/contacts');
   this.get('/contacts/:id');
   this.post('/contacts');
-  this.put('/contacts/:id');
+  this.patch('/contacts/:id');
   this.del('/contacts/:id');
 }
