@@ -10,5 +10,9 @@ export default Mirage.Factory.extend({
   birthday: faker.date.past,
   picture: faker.image.avatar,
   email: faker.internet.email,
-  phone: faker.phone.phoneNumber
+  phone: faker.phone.phoneNumber,
+  workPhone: faker.phone.phoneNumber,
+  homePhone: faker.phone.phoneNumber,
+  celPhone: faker.phone.phoneNumber,
+  address: faker.address.streetAddress
 });

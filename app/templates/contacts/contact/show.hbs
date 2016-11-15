@@ -19,6 +19,18 @@
           <td class="phone">{{model.phone}}</td>
         </tr>
         <tr>
+          <td class="icon">{{fa-icon 'phone'}}</td>
+          <td class="phone">Work {{model.workPhone}}</td>
+        </tr>
+        <tr>
+          <td class="icon">{{fa-icon 'phone'}}</td>
+          <td class="phone">Home {{model.homePhone}}</td>
+        </tr>
+        <tr>
+          <td class="icon">{{fa-icon 'phone'}}</td>
+          <td class="phone">cel {{model.celPhone}}</td>
+        </tr>
+        <tr>
           <td class="icon">{{fa-icon 'envelope-o'}}</td>
           <td class="email">{{model.email}}</td>
         </tr>
@@ -26,10 +38,13 @@
           <td class="icon">{{fa-icon 'birthday-cake'}}</td>
           <td class="birthday">{{model.birthday}}</td>
         </tr>
+        <tr>
+          <td class="icon">{{fa-icon 'home'}}</td>
+          <td class="birthday">{{model.address}}</td>
+        </tr>
       </tbody>
     </table>
   </div>
 </div>
 <button {{action 'destroy'}}>Destroy</button>
-|
 {{#link-to 'contacts.contact.edit' model tagName="button"}}Edit{{/link-to}}
