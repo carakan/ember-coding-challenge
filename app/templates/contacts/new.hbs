@@ -1,13 +1,3 @@
-<div class="monster-card">
-  Name: {{one-way-input value=newModel.firstName update=(action (mut newModel.firstName))}}
-  <br>
-  Last Name: {{one-way-input value=newModel.lastName update=(action (mut newModel.lastName))}}
-  <br>
-  Job Title: {{one-way-input value=newModel.jobTitle update=(action (mut newModel.jobTitle))}}
-  <br>
-  <img src={{ newModel.picture}} />
-  <br>
-  Image Source: {{one-way-input value=newModel.picture update=(action (mut newModel.picture))}}
-  <br>
-</div>
+{{ contact-form model=newModel }}
+
 <button {{action 'save'}}>Save</button>

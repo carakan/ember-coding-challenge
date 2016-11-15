@@ -1,0 +1,26 @@
+<div class="monster-card">
+  <label>Name:</label> {{one-way-input value=model.firstName update=(action (mut model.firstName))}}
+  <br>
+  <label>Last Name:</label> {{one-way-input value=model.lastName update=(action (mut model.lastName))}}
+  <br>
+  <img src={{model.picture}} />
+  <br>
+  <label>Image Source:</label> {{one-way-input value=model.picture update=(action (mut model.picture))}}
+  <br>
+  <label>Job Title:</label> 
+  {{one-way-input value=model.jobTitle update=(action (mut model.jobTitle))}}
+  <br>
+  <label>Company:</label> 
+  {{one-way-input value=model.company update=(action (mut model.company))}}
+  <br>
+  <label>Birthday:</label> 
+  {{one-way-input value=model.birthday update=(action (mut model.birthday))}}
+  <br>
+  <label>Email:</label>
+  {{one-way-input value=model.email update=(action (mut model.email))}}
+  <br>
+  <label>Phone</label>
+  {{one-way-input value=model.phone update=(action (mut model.phone))}}
+  <br>
+</div>
+
