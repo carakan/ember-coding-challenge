@@ -1,6 +1,6 @@
 <div class="contact-search">
   <div class="search-wrapper">
-    <input type="text" placeholder="Search Users">
+    {{input value=search placeholder="Search users"}}
   </div>
   {{#link-to 'contacts.new' tagName="button"}}New Contact{{/link-to}}
   <ul class="contacts-list">

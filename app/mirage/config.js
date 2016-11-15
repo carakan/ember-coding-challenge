@@ -2,10 +2,23 @@ export default function() {
   // this.namespace = '';
   this.timing = 400;
 
-  /*
-    Route shorthand cheatsheet
-  */
-  this.get('/contacts');
+  //this.get('/contacts');
+
+this.get('/contacts', function (db, request) {
+    let contacts = [];
+    console.log(request.queryParams, 'query search');
+    if (Object.keys(request.queryParams).length === 0) {
+      contacts = db.contacts.all();
+    } else {
+      const filter = request.queryParams.search;
+      console.log(filter);
+      contacts = db.contacts.where({firstName: filter});
+    }
+
+    return contacts;
+});
+
+
   this.get('/contacts/:id');
   this.post('/contacts');
   this.patch('/contacts/:id');
