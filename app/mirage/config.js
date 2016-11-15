@@ -4,7 +4,7 @@ export default function() {
 
   //this.get('/contacts');
 
-this.get('/contacts', function (db, request) {
+  this.get('/contacts', function (db, request) {
     let contacts = [];
     console.log(request.queryParams, 'query search');
     if (Object.keys(request.queryParams).length === 0) {
@@ -12,11 +12,13 @@ this.get('/contacts', function (db, request) {
     } else {
       const filter = request.queryParams.search;
       console.log(filter);
-      contacts = db.contacts.where({firstName: filter});
+      contacts = db.contacts.where(function(contact){
+        return (contact.firstName.indexOf(filter) !== -1 ||
+                contact.lastName.indexOf(filter) !== -1 );
+      });
     }
-
     return contacts;
-});
+  });
 
 
   this.get('/contacts/:id');
