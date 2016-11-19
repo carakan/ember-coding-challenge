@@ -12,5 +12,10 @@ export default Ember.Route.extend({
     } else {
     return this.store.query('contact', params);
     }
+  },
+  afterModel(model) {
+    if (model.get('length') >= 1) {
+      this.transitionTo('contacts.contact.show', model.get('firstObject'));
+    }
   }
 });
