@@ -2,7 +2,6 @@
   <div class="search-wrapper">
     {{input value=search placeholder="Search users"}}
   </div>
-  {{#link-to 'contacts.new' tagName="button"}}New Contact{{/link-to}}
   <ul class="contacts-list">
     {{#each model as |contact|}}
       {{#link-to 'contacts.contact.show' contact
@@ -19,6 +18,9 @@
       {{/link-to}}
     {{/each}}
   </ul>
+  <div class="search-wrapper">
+    {{#link-to 'contacts.new' tagName="button"}}New Contact{{/link-to}}
+  </div>
 </div>
 <div class="contact-detail">
   {{ liquid-outlet }}
