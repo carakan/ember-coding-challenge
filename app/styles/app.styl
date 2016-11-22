@@ -25,11 +25,21 @@ body {
   body {
     font-size: 22px
   }
+  .contacts-wrapper {
+    .contact-search{
+      width: 450px
+    }
+  }
 }
 
 @media (max-width: 1400px) {
   body {
     font-size: 20px
+  }
+  .contacts-wrapper {
+    .contact-search{
+      width: 450px
+    }
   }
 }
 
@@ -37,11 +47,21 @@ body {
   body {
     font-size: 18px
   }
+  .contacts-wrapper {
+    .contact-search{
+      width: 400px
+    }
+  }
 }
 
 @media (max-width: 1000px) {
   body {
     font-size: 16px
+  }
+  .contacts-wrapper {
+    .contact-search{
+      width: 300px
+    }
   }
 }
 
@@ -49,11 +69,21 @@ body {
   body {
     font-size: 14px
   }
+  .contacts-wrapper {
+    .contact-search{
+      width: 200px
+    }
+  }
 }
 
 @media (max-width: 600px) {
   body {
     font-size: 12px
+  }
+  .contacts-wrapper {
+    .contact-search{
+      width: 200px
+    }
   }
 }
 
@@ -110,6 +140,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .contact-detail {
     flex: 5 1 auto
+    overflow-y: auto
 
     .contact-form {
       padding: 20px
@@ -132,7 +163,6 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1 1 auto
     display: flex
     flex-direction: column
-    width: 450px;
 
     button{
       font-size: 15px;
